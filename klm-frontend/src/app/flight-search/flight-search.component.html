@@ -1,0 +1,73 @@
+<div class="secondary-container">
+<mat-tab-group  class="sub-header">
+    <mat-tab label="Book a flight">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div>
+            <mat-label>Trip</mat-label>
+            <ng-select [(ngModel)]="selectedCar">
+              <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+           </ng-select> 
+          </div>
+          </div>
+          <div class="col-sm">
+            <mat-label>Departing From</mat-label>
+            <ng-select [(ngModel)]="selectedCar">
+              <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+           </ng-select> 
+          </div>
+          <div class="col-sm">
+            <mat-label>Arriving</mat-label>
+            <ng-select [(ngModel)]="selectedCar">
+              <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+           </ng-select>
+          
+            <!-- <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+              <img src='assets/departure.jpg' style="width: 6%;">  {{food.viewValue}}
+              </mat-option>
+            </mat-select> -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4" style="margin-top:2%">
+        <div style="display: flex;top: 2px; flex-direction: column;">
+          <mat-label>Travel Dates</mat-label>
+          <div style="display: flex;">
+          <input matInput [matDatepicker]="picker" style="width:90%;">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-4" style="margin-top:2%">
+        <div style="display: flex;top: 2px; flex-direction: column;">
+          <mat-label>No of Passengers</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="Sushi" style="height: 38px;border: 1px solid grey;">
+        </div>
+      </div>
+      <div class="col-sm-4" style="margin-top:2%">
+        <div style="display: flex;top: 2px; flex-direction: column;">
+          <mat-label>Class</mat-label>
+          <ng-select [(ngModel)]="selectedCar">
+            <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+         </ng-select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" style="margin-top:2%;display: flex;justify-content: flex-end;">
+        <button type="button" class="btn btn-primary" style="left: 0px;">Search</button>
+      </div>
+    </div>
+      </div>
+      <!-- <mat-card style="border: 1px solid;">
+     
+      </mat-card> -->
+    </mat-tab>
+    <mat-tab label="Flight with miles" >
+    </mat-tab>
+  </mat-tab-group>
+</div>

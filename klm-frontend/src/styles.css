@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-label .mat-tab-label-content{
+    color: black;
+    font-weight: 700;
+}
+.mat-tab-group.primary-content.mat-primary .mat-tab-label-container{
+    background-color: #2f81ed;
+    background-image: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+.mat-tab-group.sub-header.mat-primary .mat-tab-header .mat-tab-label-container{
+    background-image:none !important;
+    background-color: #ffff !important;
+}
+
+.mat-tab-body-wrapper{
+    height: 250px !important;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height:6%;
+    width: 100%;
+    background-color:#2f81ed;
+    color: white;
+    text-align: center;
+  }
