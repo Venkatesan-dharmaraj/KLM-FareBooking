@@ -1,5 +1,5 @@
-<div class="secondary-container">
-<mat-tab-group  class="sub-header">
+<div class="secondary-container" style="height: 100%;">
+<mat-tab-group  class="sub-header" style="height: 100%;">
     <mat-tab label="Book a flight">
       <div class="container">
         <div class="row">
@@ -7,20 +7,20 @@
             <div>
             <mat-label>Trip</mat-label>
             <ng-select [(ngModel)]="selectedCar">
-              <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+              <ng-option *ngFor="let trips of trip" [value]="trips.id">{{trips.name}}</ng-option>
            </ng-select> 
           </div>
           </div>
           <div class="col-sm">
             <mat-label>Departing From</mat-label>
-            <ng-select [(ngModel)]="selectedCar">
-              <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+            <ng-select [(ngModel)]="selectedDepartment">
+              <ng-option *ngFor="let depart of departList" [value]="depart.code">{{depart.name}}</ng-option>
            </ng-select> 
           </div>
           <div class="col-sm">
             <mat-label>Arriving</mat-label>
-            <ng-select [(ngModel)]="selectedCar">
-              <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+            <ng-select [(ngModel)]="selectedArrival">
+              <ng-option *ngFor="let depart of departList" [value]="depart.code">{{depart.name}}</ng-option>
            </ng-select>
           
             <!-- <mat-select>
@@ -45,14 +45,14 @@
       <div class="col-sm-4" style="margin-top:2%">
         <div style="display: flex;top: 2px; flex-direction: column;">
           <mat-label>No of Passengers</mat-label>
-          <input matInput placeholder="Ex. Pizza" value="Sushi" style="height: 38px;border: 1px solid grey;">
+          <input matInput placeholder="no of passengers"  style="height: 38px;border: 1px solid grey;">
         </div>
       </div>
       <div class="col-sm-4" style="margin-top:2%">
         <div style="display: flex;top: 2px; flex-direction: column;">
           <mat-label>Class</mat-label>
-          <ng-select [(ngModel)]="selectedCar">
-            <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+          <ng-select [(ngModel)]="classType">
+            <ng-option *ngFor="let classesType of classes" [value]="classesType.id">{{classesType.value}}</ng-option>
          </ng-select>
         </div>
       </div>

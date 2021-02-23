@@ -19,8 +19,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .mat-tab-body-wrapper{
-    height: 250px !important;
+    height: 100% !important;
 }
+
 .footer {
     position: fixed;
     left: 0;
